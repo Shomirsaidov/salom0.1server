@@ -1,9 +1,7 @@
 const { disconnect } = require('process');
+const { Server } = require('socket.io')
 
-const app = require('express')()
-const httpServer = require('http').createServer(app)
-
-const io = require("socket.io")(httpServer, {
+const io = new Server(3000, {
   cors: {
     origin: "*",
     methods: ["GET", "POST"]
