@@ -1,3 +1,5 @@
+//bismillah
+
 const { disconnect } = require('process');
 const { Server } = require('socket.io')
 
@@ -72,22 +74,5 @@ io.on('connection', (socket) => {
     socket.broadcast.emit("newMember", globalLength)
   })
 
-
-
-
-
-
-
-
-
-
-
 })
 
-
-
-
-
-
-
-httpServer.listen(3000, () => console.log("Server started on port 3000"))
