@@ -4,8 +4,8 @@ const { createServer } = require("https");
 const { Server } = require('socket.io')
 
 const httpsServer = createServer({
-  key: readFileSync("/ssl/ssl.key"),
-  cert: readFileSync("/ssl/ssl.crt")
+  key: readFileSync("./ssl/ssl.key"),
+  cert: readFileSync("./ssl/ssl.crt")
 });
 
 const io = new Server(httpsServer, {
